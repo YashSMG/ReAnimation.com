@@ -7,6 +7,7 @@ body {
   box-sizing: border-box;
   margin-top: 0px;
   margin-left: 0px;
+  background-color: rgb(245, 253, 253);
 }
 p {
 	margin-bottom: 0px;
@@ -301,6 +302,14 @@ header .navbar {
 }
 .navbar .navbar-nav .nav-item {
 	/* margin: 0px 15px; */
+	margin-left: 15px;
+}
+.navbar .navbar-nav .active .nav-link{
+	padding: 5px 15px;
+	background-color:  rgb(31, 168, 188);
+	border: 1px solid rgb(31, 168, 188);
+	color: whitesmoke !important;
+	border-radius: 25px;
 }
 .navbar .navbar-nav a.nav-link {
 	text-transform: capitalize;
@@ -317,7 +326,7 @@ header .navbar {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-	color: rgb(19, 45, 102);
+	/* color: rgb(19, 45, 102); */
 	font-weight: 500;
 	/* border-bottom: 3px solid #a4c639; */
 }
@@ -502,12 +511,17 @@ header .navbar {
 	margin-bottom: 30px;
 }
 
+.abt_btn{
+	align-content: center;
+}
+
 /* about us end */
 
 /* our courses start */
 
 .courses {
-	margin-top: 140px;
+	padding-top: 140px;
+	padding-bottom: 140px;
 	background-color: rgb(245, 253, 253);
 }
 
@@ -637,7 +651,7 @@ header .navbar {
 /* oper demat-account start here */
 
 .demat-account {
-	margin-top: 140px;
+	/* padding-top: 140px; */
 	background-image: url(../images/fun-facts-bg.jpg);
 	/* background-image: url(../assets/img/carousel2.jpg); */
 	background-position: center center;
@@ -972,14 +986,14 @@ header .navbar {
 }
 
 .callback-form {
-	margin-top: 140px;
-	padding-top: 100px;
+	/* margin-top: 140px; */
+	padding-top: 170px;
 	padding-bottom: 100px;
-	background-color: #f8ffe2;
+	background-color: rgb(245, 253, 253);
 }
 
 .callback-form .contact-form {
-	background-color: #a4c639;
+	background-color: rgb(31, 168, 188);
 	padding: 60px;
 	border-radius: 5px;
 	text-align: center;
@@ -1301,9 +1315,10 @@ footer .contact-form button.filled-button:hover {
 /* team */
 
 .team {
-	background-color: #f7f7f7;
+
+	/* background-color: #f7f7f7; */
 	margin-top: 140px;
-	margin-bottom: -140px;
+	margin-bottom: 140px;
 	padding: 120px 0px;
 }
 
