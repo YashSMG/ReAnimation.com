@@ -62,7 +62,7 @@ a.border-button {
 
 a.border-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(19, 45, 102)
 }
 
 .section-heading {
@@ -271,7 +271,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: #a4c639!important;
+	color: rgb(19, 45, 102)!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -352,80 +352,103 @@ header .navbar {
 	font-family: 'FontAwesome';
 } 
 
+
 /* Banner style started */
+/* Container for the carousel images */
 .image-container {
-	position: relative;
-	/* width: 100%; /* Adjust as needed 
-	max-width: 500px; Adjust as needed */
+	position: relative; /* Must be relative */
+	width: 100%;
+	height: 100%;
   }
-.image-overlay {
+  
+  /* Transparent overlay */
+  .image-overlay {
 	position: absolute;
+	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency and color as needed */
+	background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency and color */
+	z-index: 2; /* Ensure overlay is above image but below caption */
   }
-.img_carousel{
+  
+  /* General carousel settings */
+  .img_carousel {
 	padding-top: 80px;
-}
-.carousel{
+  }
+  
+  .carousel {
 	position: relative;
-}
-.carousel-inner {
-    position: relative;
-    width: 100%;
+  }
+  
+  .carousel-inner {
+	position: relative;
+	width: 100%;
 	height: 615px;
-    overflow: hidden;
-}
-.carousel-caption{
+	overflow: hidden;
+  }
+  
+  /* Caption styling */
+  .carousel-caption {
 	position: absolute;
-	top: 200px;
-    /* bottom: 355px; */
-    left: 17%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: left;
-}
-
-.carousel-caption h1{
-	
-}
-.carousel-caption .carousel_btn a{
-	position: absolute;
-	border: 1px rgb(0, 106, 255) solid;
+	top: 150px;
+	left: 15%;
+	z-index: 3; /* Ensure caption is above overlay */
+	color: #fff;
+	text-align: left;
+  }
+  
+  .carousel-caption .carousel_head {
+	font-size: 70px;
 	color: white;
-	border-radius: 25px;
-	margin-top: 90px;
-	padding: 10px 15px;
-	text-decoration: none;
-	font-weight: 600;
+  }
+
+  .carousel-caption .main_para {
 	font-size: 20px;
+	margin-left: 10px;
+	color: white;
+  }
 
-}
-.carousel-caption .carousel_btn a:hover{
-	
-	color: black;
-	background-color: white;
-	
-
-}
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 15;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none;
-}
+  .carousel-caption .sub_para {
+	color: white;
+	margin-left: 10px;
+	margin-bottom: 50px;
+  }
+  
+  .carousel-caption .carousel_btn1 {
+	position: relative;
+	color: white;
+	border: 1px rgb(31, 168, 188) solid;
+	background-color: rgb(31, 168, 188);
+	border-radius: 25px;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 19px;
+	margin-left: 10px;
+  }
+  
+  .carousel-caption .carousel_btn1:hover {
+	background-color: transparent;
+	border: 1px rgb(31, 168, 188) solid;
+	color: rgb(31, 168, 188);
+  }
+  
+  /* Indicators styling */
+  .carousel-indicators {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	left: 0;
+	z-index: 15;
+	display: flex;
+	justify-content: center;
+	padding-left: 0;
+	margin-right: 15%;
+	margin-left: 15%;
+	list-style: none;
+  }
+  
 /* Banner Style ended */
 
 
@@ -457,7 +480,8 @@ header .navbar {
 /* about us start */
 
 .about {
-	margin-top: 140px;
+	padding-top: 140px;
+	background-image: linear-gradient(360deg, rgb(245,253,253) 0%,transparent 57%),repeating-linear-gradient(405deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(315deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),linear-gradient(360deg, rgb(245,253,253),rgb(245,253,253));
 }
 
 .about .left-image img {
@@ -469,15 +493,6 @@ header .navbar {
 .about .more-info-content {
 	background-color: transparent;
 }
-
-/* .about-info .more-info-content {
-	background-color: transparent;
-}
-
-.about-info .right-content {
-	padding: 0px!important;
-	margin-right: 30px;
-} */
 
 .about .right-content {
 	padding: 0px 45px 20px 30px;
@@ -511,17 +526,20 @@ header .navbar {
 	margin-bottom: 30px;
 }
 
-.abt_btn{
-	align-content: center;
-}
+.abt_btn a {
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+  }
+  
 
 /* about us end */
 
 /* our courses start */
 
 .courses {
-	padding-top: 140px;
-	padding-bottom: 140px;
+	margin-top: 140px;
+	margin-bottom: 140px;
 	background-color: rgb(245, 253, 253);
 }
 
@@ -550,8 +568,9 @@ header .navbar {
 /* our services starts here */
 
 .services {
-	margin-top: 140px ;
-	background-color: rgb(245, 253, 253);
+	margin-top: 70px ;
+	margin-bottom: 100px;
+	/* background-color: rgb(171, 237, 249); */
 	/* padding:  100px 100px; */
 	padding-top: 80px;
 	padding-bottom: 50px;
@@ -650,20 +669,35 @@ header .navbar {
 
 /* oper demat-account start here */
 
-.demat-account {
-	/* padding-top: 140px; */
-	background-image: url(../images/fun-facts-bg.jpg);
-	/* background-image: url(../assets/img/carousel2.jpg); */
+.brosher {
+	position: relative;
+	background-image: url(../img/bg2.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 140px 0px;
 	color: #fff;
-	
 	display: flex;
 	text-align: center;
-}
+  }
+  
+  .brosher::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha for transparency */
+	z-index: 1; /* Ensure the overlay is below the content */
+  }
+  
+  .brosher .container {
+	position: relative;
+	z-index: 2; /* Ensure the content is above the overlay */
+  }
+  
 
 /* fun-facts ends here/ open a demat account ends here */
 
@@ -1051,9 +1085,9 @@ header .navbar {
 }
 
 .callback-form .contact-form button.border-button {
-	background-color: transparent;
+	background-color: rgb(19, 45, 102);
 	color: #fff;
-	border: 2px solid #fff;
+	border: none;
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -1069,7 +1103,7 @@ header .navbar {
 
 .callback-form .contact-form button.border-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(19, 45, 102);
 }
 
 .contact-us .contact-form button.filled-button {
@@ -1123,7 +1157,7 @@ header .navbar {
 /* Footer Style */
 
 footer {
-	background-color: #232323;
+	background-color: rgb(4, 10, 22);
 	padding: 80px 0px;
 	color: #fff;
 }
@@ -1165,7 +1199,7 @@ footer ul.social-icons li a {
 }
 
 footer ul.social-icons li a:hover {
-	background-color: #a4c639;
+	background-color: rgb(31, 168, 188);
 }
 
 footer ul.menu-list li {
@@ -1183,7 +1217,7 @@ footer ul.menu-list li a {
 }
 
 footer ul.menu-list li a:hover {
-	color: #a4c639;
+	color: rgb(31, 168, 188);
 }
 
 footer .contact-form input {
@@ -1193,7 +1227,7 @@ footer .contact-form input {
 	display: inline-block;
 	padding: 0px 15px;
 	color: #aaa!important;
-	background-color: #343434;
+	background-color: rgb(12, 30, 68);
 	font-size: 13px;
 	text-transform: none;
 	box-shadow: none;
@@ -1216,7 +1250,7 @@ footer .contact-form textarea {
 	display: inline-block;
 	padding: 15px;
 	color: #aaa!important;
-	background-color: #343434;
+	background-color: rgb(12, 30, 68);
 	font-size: 13px;
 	text-transform: none;
 	box-shadow: none;
@@ -1244,7 +1278,7 @@ footer .contact-form ::placeholder {
 footer .contact-form button.filled-button {
 	background-color: transparent;
 	color: #fff;
-	background-color: #a4c639;
+	background-color: rgb(31, 168, 188);
 	border: none;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -1261,7 +1295,7 @@ footer .contact-form button.filled-button {
 
 footer .contact-form button.filled-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(31, 168, 188);
 }
 
 
@@ -1269,7 +1303,7 @@ footer .contact-form button.filled-button:hover {
 /* Sub-footer Style */
 
 .sub-footer {
-	background-color: #343434;
+	background-color: rgb(12, 30, 68);
 	text-align: center;
 	padding: 25px 0px;
 }
@@ -1285,9 +1319,11 @@ footer .contact-form button.filled-button:hover {
 }
 
 
+/* about us seprate page start */
+
 .page-heading {
 	text-align: center;
-	background-image: url(../images/page-heading-bg.jpg);
+	background-image: url(../img/bg1.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;

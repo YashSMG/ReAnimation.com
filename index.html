@@ -18,6 +18,8 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <!-- Animate style CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
 
   <body>
@@ -99,6 +101,7 @@
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
           </ul>
           <div class="carousel-inner">
             <div class="carousel-item image-container active">
@@ -106,11 +109,10 @@
               <div class="image-overlay"></div>
               <div class="carousel-caption">
                 <div class="carousel_text">
-                  <h1>Our services</h1>
-                  <p> Lorem, ipsum dolor sit amet </p>
-                </div>
-                <div class="carousel_btn">
-                  <a href="#">View More</a>
+                  <h1 class="carousel_head animate__animated animate__slideInDown">Our services</h1>
+                  <p class="main_para animate__animated animate__slideInDown"> Lorem, ipsum dolor sit amet </p>
+                  <p class="sub_para animate__animated animate__slideInDown">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet</p>
+                  <a href="#" class="carousel_btn1 animate__animated animate__slideInUp">View More</a>
                 </div>
               </div>   
             </div>
@@ -119,11 +121,10 @@
               <div class="image-overlay"></div>
               <div class="carousel-caption">
                 <div class="carousel_text">
-                  <h1>Our services</h1>
-                  <p> Lorem, ipsum dolor sit amet </p>
-                </div>
-                <div class="carousel_btn">
-                  <a href="#" >View More</a>
+                  <h1 class="carousel_head animate__animated animate__slideInDown">Our services</h1>
+                  <p class="main_para animate__animated animate__slideInDown"> Lorem, ipsum dolor sit amet </p>
+                  <p class="sub_para animate__animated animate__slideInDown">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet</p>
+                  <a href="#" class="carousel_btn1 animate__animated animate__slideInUp">View More</a>
                 </div>
               </div>   
             </div>
@@ -132,20 +133,31 @@
               <div class="image-overlay"></div>
               <div class="carousel-caption">
                 <div class="carousel_text">
-                  <h1>Our services</h1>
-                  <p> Lorem, ipsum dolor sit amet </p>
+                  <h1 class="carousel_head animate__animated animate__slideInDown">Our services</h1>
+                  <p class="main_para animate__animated animate__slideInDown"> Lorem, ipsum dolor sit amet </p>
+                  <p class="sub_para animate__animated animate__slideInDown">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet</p>
+                  <a href="#" class="carousel_btn1 animate__animated animate__slideInUp">View More</a>
                 </div>
-                <div class="carousel_btn">
-                  <a href="#" >View More</a>
+              </div>    
+            </div>
+            <div class="carousel-item image-container">
+              <img src="assets/img/carousel1.jpg" alt="New York" width="100%" height=700">
+              <div class="image-overlay"></div>
+              <div class="carousel-caption">
+                <div class="carousel_text">
+                  <h1 class="carousel_head animate__animated animate__slideInDown">Our services</h1>
+                  <p class="main_para animate__animated animate__slideInDown"> Lorem, ipsum dolor sit amet </p>
+                  <p class="sub_para animate__animated animate__slideInDown">Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet</p>
+                  <a href="#" class="carousel_btn1 animate__animated animate__slideInUp">View More</a>
                 </div>
               </div>    
             </div>
           </div>
           <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <!-- <span class="carousel-control-prev-icon"></span> -->
           </a>
           <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <!-- <span class="carousel-control-next-icon"></span> -->
           </a>
         </div>
     </div>
@@ -182,8 +194,10 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-12 ">
-                  <a href="#" class="filled-button abt_btn">Read More</a>
+              </div>
+              <div class="row justify-content-center"> <!-- Use Bootstrap classes for centering -->
+                <div class="col-auto"> <!-- Use col-auto to shrink to fit content -->
+                  <a href="#" class="filled-button">Read More</a>
                 </div>
               </div>
             </div>
@@ -208,7 +222,7 @@
         </div>
 
         <div class="row px-lg-5">
-          <div class=" col-lg-3">
+          <div class=" col-lg-4">
             <div class="services-item">
               <img src="assets/images/service_01.jpg" alt="">
               <div class="down-content">
@@ -224,7 +238,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="services-item">
               <img src="assets/images/service_02.jpg" alt="">
               <div class="down-content">
@@ -234,7 +248,7 @@
               </div>
             </div>
           </div>
-          <div class=" col-lg-3">
+          <div class=" col-lg-4">
             <div class="services-item">
               <img src="assets/images/service_03.jpg" alt="">
               <div class="down-content">
@@ -244,20 +258,20 @@
               </div>
             </div>
           </div>
-          <div class=" col-lg-3">
+          <!-- <div class=" col-lg-3">
             <div class="services-item">
               <img src="assets/images/service_03.jpg" alt="">
               <div class="down-content">
                 <h4>Effective Training Module</h4>
                 <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                <!-- <a href="" class="filled-button">Read More</a> -->
+                <!-- <a href="" class="filled-button">Read More</a> --
               </div>
             </div>
-          </div>
+          </div> -->
         </div> 
 
         <div class="row pt-lg-5 px-lg-5">
-          <div class=" col-lg-3 pt ">
+          <div class=" col-lg-4 ">
             <div class="services-item">
               <img src="assets/images/service_01.jpg" alt="">
               <div class="down-content">
@@ -273,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <div class="services-item">
               <img src="assets/images/service_02.jpg" alt="">
               <div class="down-content">
@@ -283,7 +297,7 @@
               </div>
             </div>
           </div>
-          <div class=" col-lg-3">
+          <div class=" col-lg-4">
             <div class="services-item">
               <img src="assets/images/service_03.jpg" alt="">
               <div class="down-content">
@@ -293,15 +307,20 @@
               </div>
             </div>
           </div>
-          <div class=" col-lg-3">
+          <!-- <div class=" col-lg-3">
             <div class="services-item">
               <img src="assets/images/service_03.jpg" alt="">
               <div class="down-content">
                 <h4>Offline Classes</h4>
                 <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                <!-- <a href="" class="filled-button">Read More</a> -->
+                <!-- <a href="" class="filled-button">Read More</a> --
               </div>
             </div>
+          </div> -->
+        </div>
+        <div class="row justify-content-center mt-5"> <!-- Use Bootstrap classes for centering -->
+          <div class="col-auto"> <!-- Use col-auto to shrink to fit content -->
+            <a href="#" class="filled-button">Read More</a>
           </div>
         </div>
       </div>
@@ -380,13 +399,13 @@
     
 
     <!-- open demat account start here -->
-    <div class="demat-account">
+    <div class="brosher">
       <div class="container">
         <div class="col-12">
           <h1>Download Our ReAnimation Institute Brosher</h1>
         </div>
         <div class="col-12 pt-5">
-          <a href="https://upstox.com/open-demat-account/?f=Q60K&gad_source=1&gclid=CjwKCAjw34qzBhBmEiwAOUQcF24NP9G6lqFvihqB8aoQkyKcQKyrptg3ui3pVaZFF-j_sA5PIJTfJhoCtToQAvD_BwE" class="filled-button" target="_blank">Download</a>
+          <a href="#" class="filled-button" target="_blank">Download</a>
         </div>
       </div>
     </div>
