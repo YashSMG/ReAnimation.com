@@ -361,6 +361,10 @@ header .navbar {
 	height: 100%;
   }
   
+  .image-container img{
+	object-fit: cover; /* Ensures images cover the area without distortion */
+	overflow: hidden;
+  }
   /* Transparent overlay */
   .image-overlay {
 	position: absolute;
@@ -536,21 +540,30 @@ header .navbar {
 /* about us end */
 
 /* our courses start */
-
 .courses {
 	margin-top: 140px;
 	margin-bottom: 140px;
 	background-color: rgb(245, 253, 253);
 }
 
+.courses-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .courses-item img {
 	width: 100%;
+	height: 230px; /* Set a fixed height for the images */
+	object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
 	overflow: hidden;
 }
 
 .courses-item .down-content {
-	background-color: #f7f7f7;
+	background-color:rgb(223, 243, 246);
 	padding: 30px;
+	flex-grow: 1; /* Make sure the content area grows to fill the remaining space */
+	width: 100%; /* Ensure the content takes the full width of the card */
 }
 
 .courses-item .down-content h4 {
@@ -563,28 +576,35 @@ header .navbar {
 .courses-item .down-content p {
 	margin-bottom: 20px;
 }
+
 /* ==========our courses end here=========== */
 
 /* our services starts here */
 
 .services {
-	margin-top: 70px ;
+	margin-top: 70px;
 	margin-bottom: 100px;
-	/* background-color: rgb(171, 237, 249); */
-	/* padding:  100px 100px; */
 	padding-top: 80px;
 	padding-bottom: 50px;
+}
+.service-item{
+	background-color: rgb(0, 238, 238);
+}
+.service-item .card_img{
+	padding: 10px;
 }
 
 .services-item img {
 	width: 100%;
+	height: 280px; /* Fixed height for uniform size */
+	object-fit: cover; /* Ensures images cover the area without distortion */
 	overflow: hidden;
 }
 
 .services-item .down-content {
-	/* background-color: #f7f7f7; */
 	padding: 25px 10px;
 	text-align: center;
+	background-color: rgb(223, 243, 246) ;
 }
 
 .services-item .down-content h4 {
@@ -1020,9 +1040,10 @@ header .navbar {
 }
 
 .callback-form {
-	/* margin-top: 140px; */
-	padding-top: 170px;
+	padding-top: 100px;
+	/* padding-top: 170px; */
 	padding-bottom: 100px;
+	/* background-image: repeating-linear-gradient(90deg, rgba(31,168,188, 0.04) 0px, rgba(31,168,188, 0.04) 1px,transparent 1px, transparent 30px),repeating-linear-gradient(0deg, rgba(31,168,188, 0.04) 0px, rgba(31,168,188, 0.04) 1px,transparent 1px, transparent 30px),repeating-linear-gradient(0deg, rgba(31,168,188, 0.04) 0px, rgba(31,168,188, 0.04) 1px,transparent 1px, transparent 15px),repeating-linear-gradient(90deg, rgba(31,168,188, 0.04) 0px, rgba(31,168,188, 0.04) 1px,transparent 1px, transparent 15px),linear-gradient(90deg, rgb(245,253,253),rgb(245,253,253)); */
 	background-color: rgb(245, 253, 253);
 }
 
@@ -1043,14 +1064,15 @@ header .navbar {
 	font-size: 13px;
 	text-transform: none;
 	box-shadow: none;
-	border: none;
+	border: 1px solid rgb(31, 168, 188);
 	margin-bottom: 35px;
+
 }
 
 .callback-form .contact-form input:focus {
 	outline: none;
 	box-shadow: none;
-	border: none;
+	border: 2px solid rgb(19, 45, 102);
 }
 
 .callback-form .contact-form textarea {
@@ -1064,7 +1086,9 @@ header .navbar {
 	font-size: 13px;
 	text-transform: none;
 	box-shadow: none;
-	border: none;
+	/* border: 1px solid rgb(31, 168, 188); */
+	border: 1px solid rgb(31, 168, 188);
+
 	margin-bottom: 35px;
 }
 
@@ -1072,6 +1096,7 @@ header .navbar {
 	outline: none;
 	box-shadow: none;
 	border: none;
+	border: 2px solid rgb(19, 45, 102);
 }
 
 .callback-form .contact-form ::-webkit-input-placeholder { /* Edge */
@@ -1107,7 +1132,7 @@ header .navbar {
 }
 
 .contact-us .contact-form button.filled-button {
-	background-color: #a4c639;
+	background-color: rgb(31, 168, 188);
 	color: #fff;
 	border: none;
 	font-size: 13px;
@@ -1125,7 +1150,9 @@ header .navbar {
 
 .contact-us .contact-form button.filled-button:hover {
 	background-color: #fff;
-	color: #a4c639;
+	color: rgb(31, 168, 188);
+	border: 2px solid rgb(31, 168, 188);
+	border-radius: 25px;
 }
 
 
@@ -1322,6 +1349,7 @@ footer .contact-form button.filled-button:hover {
 /* about us seprate page start */
 
 .page-heading {
+	position: relative; /* Add this line */
 	text-align: center;
 	background-image: url(../img/bg1.png);
 	background-position: center center;
@@ -1329,23 +1357,38 @@ footer .contact-form button.filled-button:hover {
 	background-size: cover;
 	padding: 230px 0px 150px 0px;
 	color: #fff;
-}
-
-.page-heading h1 {
+  }
+  
+  .page-heading .overlay { /* Add this block */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7); /* Adjust the color and transparency */
+	z-index: 1;
+  }
+  
+  .page-heading h1 {
+	position: relative; /* Add this line */
+	z-index: 2; /* Add this line */
 	text-transform: capitalize;
 	font-size: 36px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	margin-bottom: 18px;
-}
-
-.page-heading span {
+  }
+  
+  .page-heading span {
+	position: relative; /* Add this line */
+	z-index: 2; /* Add this line */
 	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #fff;
 	display: block;
-}
+  }
+  
 
 
 /* team */
@@ -1353,7 +1396,7 @@ footer .contact-form button.filled-button:hover {
 .team {
 
 	/* background-color: #f7f7f7; */
-	margin-top: 140px;
+	margin-top: 50px;
 	margin-bottom: 140px;
 	padding: 120px 0px;
 }
@@ -1364,7 +1407,7 @@ footer .contact-form button.filled-button:hover {
 }
 
 .team-item .down-content {
-	background-color: #fff;
+	background-color:rgb(223, 243, 246);
 	padding: 30px;
 }
 
@@ -1376,7 +1419,7 @@ footer .contact-form button.filled-button:hover {
 }
 
 .team-item .down-content span {
-	color: #a4c639;
+	color: rgb(31, 168, 188);
 	font-weight: 600;
 	font-size: 14px;
 	display: block;
@@ -1467,12 +1510,13 @@ footer .contact-form button.filled-button:hover {
 
 .contact-information .contact-item {
 	padding: 60px 30px;
-	background-color: #f7f7f7;
+	background-color: rgb(171, 237, 249);
 	text-align: center;
+	height: 2w0;
 }
 
 .contact-information .contact-item i {
-	color: #a4c639;
+	color: rgb(12, 30, 68);
 	font-size: 48px;
 	margin-bottom: 40px;
 }
@@ -1490,7 +1534,7 @@ footer .contact-form button.filled-button:hover {
 
 .contact-information .contact-item a {
 	font-weight: 600;
-	color: #a4c639;
+	color: rgb(12, 30, 68);
 	font-size: 15px;
 }
 
