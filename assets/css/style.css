@@ -177,7 +177,7 @@ a.border-button:hover {
 /* Sub Header Style */
 
 .sub-header {
-	background-color: #a4c639;
+	/* background-color: #a4c639; */
 	height: 46px;
 	line-height: 46px;
 }
@@ -346,7 +346,7 @@ header .navbar {
 }
 .navbar .navbar-toggler-icon:after {
 	content: '\f0c9';
-	color: #a4c639;
+	color: rgb(12, 30, 68);
 	font-size: 18px;
 	line-height: 26px;
 	font-family: 'FontAwesome';
@@ -401,7 +401,8 @@ header .navbar {
 	color: #fff;
 	text-align: left;
   }
-  
+
+
   .carousel-caption .carousel_head {
 	font-size: 70px;
 	color: white;
@@ -484,8 +485,10 @@ header .navbar {
 /* about us start */
 
 .about {
-	padding-top: 140px;
-	background-image: linear-gradient(360deg, rgb(245,253,253) 0%,transparent 57%),repeating-linear-gradient(405deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(315deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),linear-gradient(360deg, rgb(245,253,253),rgb(245,253,253));
+	padding-top: 70px;
+	padding-bottom: 70px;
+	/* background-image: linear-gradient(360deg, rgb(245,253,253) 0%,transparent 57%),repeating-linear-gradient(405deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(315deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),linear-gradient(360deg, rgb(245,253,253),rgb(245,253,253)); */
+	background-color: rgb(245, 253, 253);
 }
 
 .about .left-image img {
@@ -542,7 +545,7 @@ header .navbar {
 /* our courses start */
 .courses {
 	margin-top: 140px;
-	margin-bottom: 140px;
+	margin-bottom: 70px;
 	background-color: rgb(245, 253, 253);
 }
 
@@ -583,7 +586,7 @@ header .navbar {
 
 .services {
 	margin-top: 70px;
-	margin-bottom: 100px;
+	margin-bottom: 0px;
 	padding-top: 80px;
 	padding-bottom: 50px;
 }
@@ -1510,7 +1513,7 @@ footer .contact-form button.filled-button:hover {
 
 .contact-information .contact-item {
 	padding: 60px 30px;
-	background-color: rgb(171, 237, 249);
+	background-color: rgb(223, 243, 246);
 	text-align: center;
 	height: 2w0;
 }
@@ -1546,6 +1549,16 @@ footer .contact-form button.filled-button:hover {
 	.sub-header {
 		display: none;
 	}
+
+	/* navbar css for the mobile view start */
+	.navbar .navbar-nav .nav-item {
+		/* margin: 0px 15px; */
+		margin-left: 15px;
+		margin-right: 15px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	/* navbar css for the mobile view end */
 	.Modern-Slider .item h6 {
 	  margin-bottom: 15px;
 	  font-size: 18px;
@@ -1567,6 +1580,89 @@ footer .contact-form button.filled-button:hover {
 	.Modern-Slider .PrevArrow {
 	  left:5px;
 	}
+	
+	/* banner css in the mobile view start */
+	
+	/* Mobile view styling */
+
+	/* Mobile view styling */
+
+	.carousel-inner {
+	  height: 400px; /* Set a fixed height for the carousel in mobile view */
+	}
+  
+	.carousel-inner .image-container {
+	  height: 100%; /* Make the image container take up the full height */
+	}
+  
+	.carousel-inner .image-container img {
+	  height: 100%; /* Ensure the image takes up the full height */
+	  width: 100%;
+	  object-fit: cover; /* Crop the image from the sides if necessary */
+	}
+  
+	.carousel-caption {
+	  top: 50px; /* Adjust the top position for mobile view */
+	  left: 10%;
+	}
+  
+	.carousel-caption .carousel_head {
+	  font-size: 40px; /* Adjust the font size for mobile view */
+	}
+  
+	.carousel-caption .main_para {
+	  font-size: 16px; /* Adjust the font size for mobile view */
+	}
+  
+	.carousel-caption .sub_para {
+	  font-size: 14px; /* Adjust the font size for mobile view */
+	  margin-bottom: 30px;
+	}
+  
+	.carousel-caption .carousel_btn1 {
+	  font-size: 16px; /* Adjust the font size for mobile view */
+	  padding: 6px 12px; /* Adjust the padding for mobile view */
+	}
+  
+	.carousel-indicators {
+	  bottom: 5px; /* Adjust the bottom position for mobile view */
+	}
+	/* banner css for the mobile view end */
+
+	/* our services section css for the mobile view */
+	.services {
+		margin-top: 30px;
+		margin-bottom: 50px;
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+	.down-content{
+		margin-bottom: 30px;
+	}
+
+	/* our services section css for the mobile view end*/
+
+	/* about us section css for th mobile view start */
+	.about {
+		padding-top: 30px;
+		padding-bottom: 40px;
+		/* background-image: linear-gradient(360deg, rgb(245,253,253) 0%,transparent 57%),repeating-linear-gradient(405deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(315deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),linear-gradient(360deg, rgb(245,253,253),rgb(245,253,253)); */
+		background-color: rgb(245, 253, 253);
+	}
+	.about .right-content {
+		padding: 0px 20px 20px 20px;
+	}
+	/* about us section css for th mobile view end */
+
+	/* contact us form css for the mobile view start */
+	.callback-form .contact-form {
+		background-color: rgb(31, 168, 188);
+		padding: 30px;
+		border-radius: 5px;
+		text-align: center;
+	}
+
+	/* contact us form css for the mobile view end */
 	.request-form {
 		text-align: center;
 	}
@@ -1648,7 +1744,9 @@ footer .contact-form button.filled-button:hover {
 	.navbar .navbar-nav .nav-link.active,
 	.navbar .navbar-nav .nav-link.show,
 	.navbar .navbar-nav .show>.nav-link {
-		color: #a4c639!important;
+		color: rgb(4, 10, 22)!important;
 		border-bottom: none!important;
 	}
+
+	
 }
