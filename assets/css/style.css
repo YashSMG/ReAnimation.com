@@ -356,6 +356,8 @@ header .navbar {
 
 /* ------------------------------ Container for the carousel images start ------------------------*/
 
+
+
 /* Image container settings */
 .image-container img {
     object-fit: cover; /* Ensures images cover the area without distortion */
@@ -476,6 +478,132 @@ header .navbar {
 
 .carousel-indicators .active {
     background-color: rgb(31, 168, 188); /* Highlight active indicator */
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* For devices with a max width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
+    .carousel-caption {
+        width: 90%;
+        top: 60%;
+        transform: translate(-50%, -60%); /* Adjust vertical alignment for mobile */
+        padding: 0 10px;
+    }
+
+    .carousel-caption .carousel_head {
+        font-size: 32px; /* Reduce font size for heading */
+    }
+
+    .carousel-caption .main_para {
+        font-size: 18px; /* Smaller main text */
+    }
+
+    .carousel-caption .sub_para {
+        font-size: 16px; /* Smaller subtext */
+    }
+
+    .carousel-caption .carousel_btn1 {
+        padding: 8px 25px; /* Adjust button padding */
+        font-size: 18px; /* Slightly smaller button text */
+    }
+}
+
+/* --------------------------------------------- */
+  .carousel-inner .image-container {
+	height: 100%; /* Make the image container take up the full height */
+  }
+
+  .carousel-inner .image-container img {
+	height: 100%; /* Ensure the image takes up the full height */
+	width: 100%;
+	object-fit: cover; /* Crop the image from the sides if necessary */
+  }
+
+ 
+  .carousel-indicators {
+	bottom: 5px; /* Adjust the bottom position for mobile view */
+  }
+  /* banner css for the mobile view end */
+
+
+/* For devices with a max width of 576px (mobile phones) */
+@media (max-width: 576px) {
+    .carousel-caption {
+        width: 95%;
+        top: 50%;
+        transform: translate(-50%, -65%); /* Adjust vertical alignment further */
+    }
+
+    .carousel-caption .carousel_head {
+        font-size: 24px; /* Further reduce font size */
+    }
+
+    .carousel-caption .main_para {
+        font-size: 16px; /* Smaller main text */
+    }
+
+    .carousel-caption .sub_para {
+        font-size: 14px; /* Smaller subtext */
+    }
+
+    .carousel-caption .carousel_btn1 {
+        padding: 6px 20px; /* Further adjust button padding */
+        font-size: 16px; /* Smaller button text */
+    }
+
+    /* Adjust the image container height for mobile */
+    .carousel-inner {
+        height: 500px; /* Shorter height for mobile screens */
+    }
+}
+
+/* For devices with a max width of 400px (small phones) */
+@media (max-width: 400px) {
+	.carousel-caption {
+        width: 95%;
+        top: 45%;
+        transform: translate(-50%, -65%); /* Adjust vertical alignment further */
+    }
+    .carousel-caption .carousel_head {
+        font-size: 20px; /* Smallest font for very small devices */
+    }
+
+    .carousel-caption .main_para {
+        font-size: 14px;
+    }
+
+    .carousel-caption .sub_para {
+        font-size: 12px;
+    }
+
+    .carousel-caption .carousel_btn1 {
+        padding: 5px 15px; /* Minimal padding for smallest screens */
+        font-size: 14px;
+    }
+
+    .carousel-inner {
+        height: 400px; /* Reduce image height for small screens */
+    }
+
+	/* --------------------------------------------- */
+
+	.carousel-inner .image-container {
+		height: 100%; /* Make the image container take up the full height */
+	  }
+	
+	  .carousel-inner .image-container img {
+		height: 100%; /* Ensure the image takes up the full height */
+		width: 100%;
+		object-fit: cover; /* Crop the image from the sides if necessary */
+	  }
+	
+	 
+	  .carousel-indicators {
+		bottom: 5px; /* Adjust the bottom position for mobile view */
+	  }
+	  /* banner css for the mobile view end */
+	
 }
   
 /* ------------------------------ Banner Style ended ------------------------------------------- */
@@ -735,8 +863,9 @@ header .navbar {
 /* --------------------------------------- about us start ------------------------------------------- */
 /* General Section Styling */
 .about {
-    padding: 70px;
+    padding: 20px;
     background-color: rgb(245, 253, 253);
+	margin-top: 140px;
 }
 
 /* Image Styling */
@@ -797,7 +926,7 @@ header .navbar {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .about .right-content {
-        padding: 20px;
+        padding: 10px;
     }
 
     .about .right-content h2 {
@@ -1663,6 +1792,7 @@ footer .contact-form button.filled-button:hover {
 .faq-section {
 	padding: 60px 0;
 	/* background-color: rgb(115, 196, 209); */
+	
   }
   
   .accordion .card {
@@ -1670,10 +1800,11 @@ footer .contact-form button.filled-button:hover {
 	margin-bottom: 15px;
 	border-radius: 0;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+	background-color: white;
   }
   
   .accordion .card-header {
-	background-color: #fff;
+	background-color: rgb(223, 243, 246);
 	border-bottom: 1px solid #ddd;
 	padding: 10px 20px;
   }
@@ -1710,7 +1841,7 @@ footer .contact-form button.filled-button:hover {
   .accordion .card-body {
 	font-size: 16px;
 	color: #555;
-	background-color: rgba(221, 252, 252, 0.63);
+	background-color: white;
   }
   
   .accordion .card-body p {
@@ -1827,8 +1958,6 @@ footer .contact-form button.filled-button:hover {
 		padding: 50px 0;
 	  }
   
-	  
-  
 	  .workshop-item {
 		background-color: #DFF3F6;
 		padding: 40px 30px;
@@ -1937,52 +2066,6 @@ footer .contact-form button.filled-button:hover {
 	
 	/* banner css in the mobile view start */
 	
-	/* Mobile view styling */
-
-	/* Mobile view styling */
-
-	.carousel-inner {
-	  height: 400px; /* Set a fixed height for the carousel in mobile view */
-	}
-  
-	.carousel-inner .image-container {
-	  height: 100%; /* Make the image container take up the full height */
-	}
-  
-	.carousel-inner .image-container img {
-	  height: 100%; /* Ensure the image takes up the full height */
-	  width: 100%;
-	  object-fit: cover; /* Crop the image from the sides if necessary */
-	}
-  
-	.carousel-caption {
-	  top: 50px; /* Adjust the top position for mobile view */
-	  left: 10%;
-	}
-  
-	.carousel-caption .carousel_head {
-	  font-size: 40px; /* Adjust the font size for mobile view */
-	}
-  
-	.carousel-caption .main_para {
-	  font-size: 16px; /* Adjust the font size for mobile view */
-	}
-  
-	.carousel-caption .sub_para {
-	  font-size: 14px; /* Adjust the font size for mobile view */
-	  margin-bottom: 30px;
-	}
-  
-	.carousel-caption .carousel_btn1 {
-	  font-size: 16px; /* Adjust the font size for mobile view */
-	  padding: 6px 12px; /* Adjust the padding for mobile view */
-	}
-  
-	.carousel-indicators {
-	  bottom: 5px; /* Adjust the bottom position for mobile view */
-	}
-	/* banner css for the mobile view end */
-
 	/* our services section css for the mobile view */
 	.services {
 		margin-top: 30px;
