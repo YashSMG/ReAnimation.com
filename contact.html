@@ -13,6 +13,10 @@
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
 
   <body>
@@ -66,10 +70,10 @@
               <a class="nav-link" href="about.html">Who we are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Our Services</a>
+              <a class="nav-link " href="services.html">Our Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Our Training</a>
+              <a class="nav-link" href="training.html">Our Training</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href=".html">Gallery</a>
@@ -100,33 +104,40 @@
     <div class="contact-information">
       <div class="container">
         <div class="row">
+          <!-- First Card: Contact Information -->
           <div class="col-md-4">
             <div class="contact-item">
               <i class="fa fa-phone"></i>
-              <h4>Phone</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti doloribus unde nemo </p>
-              <a href="#">090-080-0760</a>
+              <h4>Contact Information</h4>
+              <p>Email: <a href="mailto:mauli@smc.com">info@reanimation.in</a></p>
+              <p>Phone: <a href="tel:090-080-0760">090-080-0760</a></p>
             </div>
           </div>
+          
+          <!-- Second Card: Opening Times -->
           <div class="col-md-4">
             <div class="contact-item">
-              <i class="fa fa-envelope"></i>
-              <h4>Email</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti doloribus unde nemo </p>
-              <a href="#">mauli@smc.com</a>
+              <i class="fa fa-clock-o"></i>
+              <h4>Opening Times</h4>
+              <p><b>Monday - Saturday:</b><br> 8:00 AM - 6:00 PM</p>
+              <!-- <p>Saturday: 9:00 AM - 4:00 PM</p> -->
+              <p><b>Sunday:</b> Closed</p>
             </div>
           </div>
+          
+          <!-- Third Card: Location -->
           <div class="col-md-4">
             <div class="contact-item">
               <i class="fa fa-map-marker"></i>
               <h4>Location</h4>
-              <p>1020 New Mountain Street<br>Forest Park, FP 11220</p>
-              <a href="#">View on Google Maps</a>
+              <p>1st FLOOR, GENIUS COMPLEX, Arni Rd, opp. MAHILA CO-OP. BANK, Shri Krishna Society, Yavatmal, Wadgaon Road, Maharashtra 445001</p>
+              <a href="https://maps.app.goo.gl/rkgcVtNghWX8GQETA" target="_blank">View on Google Maps</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
 
     <div class="callback-form contact-us">
       <div class="container">
@@ -134,7 +145,7 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Send us a <em>message</em></h2>
-              <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+              <span>Get the info you are looking for right now & Book Demo class</span>
             </div>
           </div>
           <div class="col-md-12">
@@ -203,81 +214,64 @@
     <!-- Footer Starts Here -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>ReAnimation Institute</h4>
-            <p>Let's Connect Yavatmal's Best Engineering Training Institute</p>
-            <ul class="social-icons">
-              <!-- <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li> -->
-              <li><a href="https://www.instagram.com/reanimation_yavatmal"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/reanimation1"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="https://www.youtube.com/@ReAnimation_1"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Lorem ipsum dolor sitt</a></li>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Additional Pages</h4>
-            <ul class="menu-list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">How We Work</a></li>
-              <li><a href="#">Our Services</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Training</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
+          <div class="row">
+              <div class="col-md-3 footer-item">
+                  <h4>ReAnimation Institute</h4>
+                  <p>Yavatmal's Premier Engineering Training Institute. Let's Connect.</p>
+                  <ul class="social-icons">
+                      <li><a href="https://www.instagram.com/reanimation_yavatmal" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="https://www.linkedin.com/company/reanimation1" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="https://www.youtube.com/@ReAnimation_1" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+                  <div id="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.1262087242026!2d78.1124894!3d20.3776855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1f296e7a2861501%3A0xaf3fcbfc3e4355ec!2sReAnimation!5e0!3m2!1sen!2sin!4v1721148597626!5m2!1sen!2sin" width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
-              </form>
-            </div>
+              </div>
+              <div class="col-md-3 footer-item">
+                  <h4>Contact Information</h4>
+                  <ul class="menu-list">
+                      <li>Address: <span>1st FLOOR, GENIUS COMPLEX, Yavatmal - Arni Rd, opp. MAHILA CO-OP. BANK, Shri Krishna Society, Yavatmal, Wadgaon Road, Maharashtra 445001</span></li>
+                      <li>Email: <a href="mailto:info@reanimation.in">info@reanimation.in</a></li>
+                      <li>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></li>
+                  </ul>
+                  
+              </div>
+              <div class="col-md-3 footer-item">
+                  <h4>Useful Links</h4>
+                  <ul class="menu-list">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">Who We Are</a></li>
+                      <li><a href="services.html">Our Services</a></li>
+                      <li><a href="training.html">Our Training</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-3 footer-item last-item">
+                  <h4>Contact Us</h4>
+                  <div class="contact-form">
+                      <form id="footer-contact" action="" method="post">
+                          <input name="name" type="text" placeholder="Full Name" required>
+                          <input name="email" type="email" placeholder="E-Mail Address" required>
+                          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                          <button type="submit" class="filled-button">Send Message</button>
+                      </form>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
     </footer>
     
     <div class="sub-footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Copyright &copy; 2024 ReAnimation |
-            Created By <a rel="" href="https://www.linkedin.com/in/yashgadhwe/" target="_blank">Yash <i class="fa fa-external-link"></i></a></p>
+          <div class="row">
+              <div class="col-md-12">
+                  <p>Copyright &copy; 2024 ReAnimation | 
+                  Created & designed by <a href="https://www.linkedin.com/in/yashgadhwe/" target="_blank">Yash<i class="fa fa-external-link"></i></a></p>
+              </div>
           </div>
-        </div>
       </div>
     </div>
-
+    
     
     <!-- Bootstrap core JavaScript -->
     <!-- <script src="vendor/jquery/jquery.min.js"></script>

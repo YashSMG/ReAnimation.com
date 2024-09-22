@@ -31,6 +31,7 @@ h1,h2,h3,h4,h5,h6 {
 a.filled-button {
 	background-color: rgb(31, 168, 188);
 	color: #fff;
+	border: 2px rgb(31, 168, 188) solid;
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -82,20 +83,19 @@ a.border-button:hover {
 }
 
 .section-heading span {
-	display: block;
 	margin-top: 15px;
-	/* text-transform: uppercase; */
+	display: block;
 	font-size: 15px;
 	color: #666;
 	letter-spacing: 1px;
 }
 
 
-/* preloader starts here */
-#preloader {
+/* -------------------------------------------- preloader starts here ----------------------------------------------- */
+/* #preloader {
   overflow: hidden;
   background:#a4c639;					
-/*  									rgb(1, 87, 155);*/
+/*  									rgb(1, 87, 155);*
   left: 0;
   right: 0;
   top: 0;
@@ -170,14 +170,14 @@ a.border-button:hover {
   100% {
     opacity: 0;
   }
-}
-/* preloader ends here */
+} */
+/* ----------------------------------- preloader ends here --------------------------------------------- */
 
 
-/* Sub Header Style */
+/* -------------------------------------- Sub Header Style ----------------------------------------------- */
 
-.sub-header {
-	/* background-color: #a4c639; */
+/* .sub-header {
+	/* background-color: #a4c639; *
 	height: 46px;
 	line-height: 46px;
 }
@@ -229,11 +229,11 @@ a.border-button:hover {
 
 .sub-header ul.right-icons li a:hover {
 	opacity: 0.75;
-}
+} */
 
 
 
-/* Header Style */
+/* -------------------------------------------------- Header Style ----------------------------------------------- */
  header {
 	position: fixed;
 	z-index: 99999;
@@ -314,7 +314,7 @@ header .navbar {
 .navbar .navbar-nav a.nav-link {
 	text-transform: capitalize;
 	font-size: 15px;
-	font-weight: 300;
+	font-weight: 500;
 	letter-spacing: 0.5px;
 	color: black;
 	/* color: #fff; */
@@ -329,6 +329,7 @@ header .navbar {
 	/* color: rgb(19, 45, 102); */
 	font-weight: 500;
 	/* border-bottom: 3px solid #a4c639; */
+	color: rgb(0, 221, 255);
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
@@ -351,113 +352,240 @@ header .navbar {
 	line-height: 26px;
 	font-family: 'FontAwesome';
 } 
+/* -------------------------------- navbar style end ------------------------------------ */
+
+/* ------------------------------ Container for the carousel images start ------------------------*/
+
+/* Image container settings */
+.image-container img {
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    overflow: hidden;
+}
+
+/* Transparent overlay */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* Slightly darker for better text contrast */
+    z-index: 2; /* Ensure overlay is above image but below caption */
+}
+
+/* Carousel container */
+.img_carousel {
+    padding-top: 80px;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 615px;
+    overflow: hidden;
+}
+
+/* Caption styling: Vertical and horizontal centering */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center vertically and horizontally */
+    z-index: 3; /* Ensure caption is above overlay */
+    color: #fff;
+    text-align: center; /* Center-align text */
+    width: 80%; /* Prevent the text from stretching too wide */
+    padding: 0 15px;
+}
+
+/* Heading */
+.carousel-caption .carousel_head {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Main paragraph */
+.carousel-caption .main_para {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+/* Sub paragraph */
+.carousel-caption .sub_para {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+/* Button styling */
+.carousel-caption .carousel_btn1 {
+    position: relative;
+    color: white;
+    border: 2px rgb(31, 168, 188) solid;
+    background-color: rgb(31, 168, 188);
+    border-radius: 25px;
+    padding: 10px 30px; /* Larger padding for better clickability */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Button hover effect */
+.carousel-caption .carousel_btn1:hover {
+    background-color: transparent;
+    border: 2px rgb(31, 168, 188) solid;
+    color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+/* Carousel indicators */
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(31, 168, 188); /* Highlight active indicator */
+}
+  
+/* ------------------------------ Banner Style ended ------------------------------------------- */
+
+/* ----------------------- our services starts here  ----------------------------------*/
 
 
-/* Banner style started */
-/* Container for the carousel images */
-.image-container {
-	position: relative; /* Must be relative */
-	width: 100%;
-	height: 100%;
+/* General Styles */
+.services {
+	margin-top: 50px;
+	padding: 60px 0;
+	background-color: #f5fdfd;
   }
   
-  .image-container img{
-	object-fit: cover; /* Ensures images cover the area without distortion */
-	overflow: hidden;
-  }
-  /* Transparent overlay */
-  .image-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency and color */
-	z-index: 2; /* Ensure overlay is above image but below caption */
-  }
-  
-  /* General carousel settings */
-  .img_carousel {
-	padding-top: 80px;
-  }
-  
-  .carousel {
-	position: relative;
-  }
-  
-  .carousel-inner {
-	position: relative;
-	width: 100%;
-	height: 615px;
-	overflow: hidden;
-  }
-  
-  /* Caption styling */
-  .carousel-caption {
-	position: absolute;
-	top: 150px;
-	left: 15%;
-	z-index: 3; /* Ensure caption is above overlay */
-	color: #fff;
-	text-align: left;
-  }
-
-
-  .carousel-caption .carousel_head {
-	font-size: 70px;
-	color: white;
-  }
-
-  .carousel-caption .main_para {
-	font-size: 20px;
-	margin-left: 10px;
-	color: white;
-  }
-
-  .carousel-caption .sub_para {
-	color: white;
-	margin-left: 10px;
+  .services .section-heading {
+	text-align: center;
 	margin-bottom: 50px;
   }
   
-  .carousel-caption .carousel_btn1 {
-	position: relative;
-	color: white;
-	border: 1px rgb(31, 168, 188) solid;
-	background-color: rgb(31, 168, 188);
-	border-radius: 25px;
-	padding: 8px 15px;
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 19px;
-	margin-left: 10px;
+  .services .section-heading h2 {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 10px;
   }
   
-  .carousel-caption .carousel_btn1:hover {
-	background-color: transparent;
-	border: 1px rgb(31, 168, 188) solid;
-	color: rgb(31, 168, 188);
+  .services .section-heading span {
+	font-size: 18px;
+	color: #888;
   }
   
-  /* Indicators styling */
-  .carousel-indicators {
-	position: absolute;
-	right: 0;
-	bottom: 10px;
-	left: 0;
-	z-index: 15;
-	display: flex;
-	justify-content: center;
-	padding-left: 0;
-	margin-right: 15%;
-	margin-left: 15%;
-	list-style: none;
+  /* Service Item Styles */
+  .services .services-item {
+	background-color: #e0f5f6;
+	border-radius: 10px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	margin-bottom: 30px;
   }
   
-/* Banner Style ended */
+  .services .services-item:hover {
+	transform: translateY(-10px);
+  }
+  
+  .services .services-item img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+  }
+  
+  .services .services-item .down-content {
+	padding: 20px;
+	text-align: center;
+  }
+  
+  .services .services-item h4 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 15px;
+  }
+  
+  .services .services-item p {
+	font-size: 15px;
+	color: #555;
+	line-height: 1.6;
+  }
+  
+  /* Button */
+  .filled-button {
+	background-color: #00b3b3;
+	color: #fff;
+	padding: 10px 30px;
+	border-radius: 30px;
+	transition: background-color 0.3s;
+  }
+  
+  .filled-button:hover {
+	background-color: #008f8f;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+	.services .services-item img {
+	  height: 200px;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.services .services-item img {
+	  height: 180px;
+	}
+  
+	.services .section-heading h2 {
+	  font-size: 28px;
+	}
+  
+	.services .services-item h4 {
+	  font-size: 18px;
+	}
+  
+	.services .services-item p {
+	  font-size: 14px;
+	}
+  }
+  
+	  
+/* ------------------------------- our services ends here ---------------------------- */
 
-
-/* Request Form */
+/* -------------------- Request Form start ---------------------------------*/
 
 .request-form {
 	background-color:rgb(19, 45, 102);
@@ -481,151 +609,209 @@ header .navbar {
 	margin-top: 12px;
 	float: right;
 }
+  /* ------------------------------------- request form bar ends here --------------------------------- */
 
-/* about us start */
 
-.about {
-	padding-top: 70px;
-	padding-bottom: 70px;
-	/* background-image: linear-gradient(360deg, rgb(245,253,253) 0%,transparent 57%),repeating-linear-gradient(405deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(315deg, rgba(31,168,188, 0.06) 0px, rgba(31,168,188, 0.06) 1px,transparent 1px, transparent 13px),linear-gradient(360deg, rgb(245,253,253),rgb(245,253,253)); */
-	background-color: rgb(245, 253, 253);
-}
-
-.about .left-image img {
-	width: 100%;
-	overflow: hidden;
-
-}
-
-.about .more-info-content {
-	background-color: transparent;
-}
-
-.about .right-content {
-	padding: 0px 45px 20px 30px;
-}
-
-.about .right-content p{
-	text-align: justify;
-}
-
-.about .right-content span {
-	text-transform: uppercase;
-	font-size: 15px;
-	color: #666;
-	letter-spacing: 1px;
-	margin-bottom: 10px;
-	display: block;
-}
-
-.about .right-content h2 {
-	font-size: 36px;
-	font-weight: 600;
-	margin-bottom: 35px;
-}
-
-.about .right-content em {
-	font-style: normal;
-	color: rgb(31, 168, 188);
-}
-
-.about .right-content p {
-	margin-bottom: 30px;
-}
-
-.abt_btn a {
-	display: inline-block;
-	text-align: center;
-	margin: 0 auto;
-  }
-  
-
-/* about us end */
-
-/* our courses start */
+/* ----------------------------------- our courses start -------------------------------------- */
+/* General Section Styling */
 .courses {
-	margin-top: 140px;
-	margin-bottom: 70px;
-	background-color: rgb(245, 253, 253);
+    margin-top: 100px;
+    /* margin-bottom: 70px; */
+    background-color: #F5FDFD; /* Soft background for better readability */
+    /* padding: 40px 0; */
 }
 
+.courses .section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.courses .section-heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Improve contrast for readability */
+}
+
+.courses .section-heading em {
+    color: #3498db; /* Accent color */
+}
+
+.courses .section-heading span {
+    font-size: 18px;
+    color: #666; /* Soft grey for subtext */
+}
+
+/* Course Item Styling */
 .courses-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff; /* White background for card contrast */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for depth */
+    border-radius: 12px; /* Larger radius for softer appearance */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.courses-item:hover {
+    transform: scale(1.03); /* Subtle zoom effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .courses-item img {
-	width: 100%;
-	height: 230px; /* Set a fixed height for the images */
-	object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
-	overflow: hidden;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
 }
 
 .courses-item .down-content {
-	background-color:rgb(223, 243, 246);
-	padding: 30px;
-	flex-grow: 1; /* Make sure the content area grows to fill the remaining space */
-	width: 100%; /* Ensure the content takes the full width of the card */
+    background-color: #DFF3F6; /* Soft background for content */
+    padding: 25px;
+    text-align: center;
+    width: 100%;
 }
 
 .courses-item .down-content h4 {
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 0.25px;
-	margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .courses-item .down-content p {
-	margin-bottom: 20px;
+    font-size: 16px;
+    color: #555; /* Softer color for description */
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-/* ==========our courses end here=========== */
-
-/* our services starts here */
-
-.services {
-	margin-top: 70px;
-	margin-bottom: 0px;
-	padding-top: 80px;
-	padding-bottom: 50px;
-}
-.service-item{
-	background-color: rgb(0, 238, 238);
-}
-.service-item .card_img{
-	padding: 10px;
+/* HR Divider Styling */
+.courses-item .down-content hr {
+    width: 50px;
+    border: 2px solid #3498db;
+    margin: 10px auto;
 }
 
-.services-item img {
-	width: 100%;
-	height: 280px; /* Fixed height for uniform size */
-	object-fit: cover; /* Ensures images cover the area without distortion */
-	overflow: hidden;
+/* Button Styling */
+.filled-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.services-item .down-content {
-	padding: 25px 10px;
-	text-align: center;
-	background-color: rgb(223, 243, 246) ;
+.filled-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Lift the button slightly */
 }
 
-.services-item .down-content h4 {
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 0.25px;
-	margin-bottom: 15px;
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .courses-item img {
+        height: 200px; /* Adjust image height for tablets */
+    }
 }
 
-.services-item .down-content p {
-	margin-bottom: 20px;
+@media (max-width: 768px) {
+    .courses-item img {
+        height: 180px; /* Further adjust image height for mobile */
+    }
+    .courses .section-heading h2 {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+    .courses .section-heading span {
+        font-size: 16px;
+    }
 }
 
- 
+
+ /* ----------------------------------------- our courses section ends here ---------------------------------- */
+
+/* --------------------------------------- about us start ------------------------------------------- */
+/* General Section Styling */
+.about {
+    padding: 70px;
+    background-color: rgb(245, 253, 253);
+}
+
+/* Image Styling */
+.about .left-image img {
+    width: 100%;
+    border-radius: 10px; /* Adds rounded corners for a modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Content Styling */
+.about .more-info-content {
+    background-color: transparent;
+    padding-top: 30px;
+}
+
+.about .right-content {
+    padding: 20px 45px 20px 30px;
+}
+
+.about .right-content h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about .right-content em {
+    font-style: normal;
+    color: rgb(31, 168, 188);
+}
+
+.about .right-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7; /* Increased line height for better readability */
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Button Styling */
+.about .filled-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about .filled-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about .right-content {
+        padding: 20px;
+    }
+
+    .about .right-content h2 {
+        font-size: 28px; /* Smaller font for mobile */
+    }
+
+    .about .left-image img {
+        margin-bottom: 20px; /* Add spacing between image and content on small screens */
+    }
+}
+
+/* -------------------------------------- about us end ----------------------------------------- */
 
 
-
-/* =========our services ends here=========== */
 
 /* Fun Facts starts here/ open a demat account start*/
 
@@ -692,7 +878,7 @@ header .navbar {
 
 /* oper demat-account start here */
 
-.brosher {
+/* .brosher {
 	position: relative;
 	background-image: url(../img/bg2.png);
 	background-position: center center;
@@ -712,15 +898,15 @@ header .navbar {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha for transparency */
-	z-index: 1; /* Ensure the overlay is below the content */
+	background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha for transparency *
+	z-index: 1; /* Ensure the overlay is below the content *
   }
   
   .brosher .container {
 	position: relative;
-	z-index: 2; /* Ensure the content is above the overlay */
+	z-index: 2; /* Ensure the content is above the overlay *
   }
-  
+   */
 
 /* fun-facts ends here/ open a demat account ends here */
 
@@ -957,7 +1143,7 @@ header .navbar {
 
 
 /* faq section starts here */
-	.faq{
+	/* .faq{
 		margin-top: 140px;
 	}
 
@@ -978,7 +1164,7 @@ header .navbar {
 		color: #fff;
 		display: block;
 		text-align: left;
-		/* background: #FFE472; */
+		/* background: #FFE472; *
 		background: #a4c639;
 		color: #222;
 		padding: 20px;
@@ -986,13 +1172,13 @@ header .navbar {
 	  
 	  #main-faq #faq .card .card-header .btn-header-link:after {
 		content: "\f107";
-		/* font-family: 'Font Awesome 5 Free'; */
+		/* font-family: 'Font Awesome 5 Free'; *
 		font-weight: 900;
 		float: right;
 	  }
 	  
 	  #main-faq #faq .card .card-header .btn-header-link.collapsed {
-		/* background: #A541BB; */
+		/* background: #A541BB; *
 		background: #a4c639;
 		color: #fff;
 	  }
@@ -1002,7 +1188,7 @@ header .navbar {
 	  }
 	  
 	  #main-faq #faq .card .collapsing {
-		/* background: #FFE472; */
+		/* background: #FFE472; *
 		background: #f8ffe2;
 		line-height: 30px;
 	  }
@@ -1012,7 +1198,7 @@ header .navbar {
 	  }
 	  
 	  #main #faq .card .collapse.show {
-		/* background: #FFE472; */
+		/* background: #FFE472; *s
 		background: #f8ffe2;
 		line-height: 30px;
 		color: #222;
@@ -1020,12 +1206,12 @@ header .navbar {
 
 	  .card-body{
 		background: #f8ffe2;
-	  }
+	  } */
 
 /* faq section ends here */
 
 
-/* Call Back Style */
+/*------------------------------ Call Back Style starts here --------------------------------------*/
 
 .callback-services {
 	border-top: 1px solid #eee;
@@ -1158,11 +1344,12 @@ header .navbar {
 	border-radius: 25px;
 }
 
+ /* --------------------------- contact us section style ends here ----------------------------------- */
 
 
 /* Partners Style */
 
-.contact-partners {
+/* .contact-partners {
 	margin-top: -8px!important;
 }
 
@@ -1181,180 +1368,164 @@ header .navbar {
 	max-width: 156px;
 	margin: auto;
 }
+ */
 
 
+/* ----------------------------------------- Footer Style starts here ------------------------------------- */
 
-/* Footer Style */
-
+/* General Footer Styles */
 footer {
-	background-color: rgb(4, 10, 22);
-	padding: 80px 0px;
-	color: #fff;
+    background-color: #04162E; /* Darker background for better contrast */
+    padding: 60px 0;
+    color: #EDEDED; /* Lighter text for better readability */
+    font-family: 'Roboto', sans-serif; /* Modern font */
 }
 
 footer h4 {
-	color: #fff;
-	font-size: 20px;
-	font-weight: 600;
-	letter-spacing: 0.25px;
-	margin-bottom: 35px;
-}
-footer p {
-	color: #fff;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
 }
 
+footer p, footer a {
+    color: #EDEDED;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+footer a:hover {
+    color: #1FA8BC; /* Hover effect for links */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Social Icons */
 footer ul.social-icons {
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
 footer ul.social-icons li {
-	display: inline-block;
-	margin-right: 5px;
-}
-
-footer ul.social-icons li:last-child {
-	margin-right: 0px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 footer ul.social-icons li a {
-	width: 34px;
-	height: 34px;
-	display: inline-block;
-	line-height: 34px;
-	text-align: center;
-	background-color: #fff;
-	color: #232323;
-	border-radius: 50%;
-	transition: all 0.3s;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #04162E;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    line-height: 40px;
 }
 
 footer ul.social-icons li a:hover {
-	background-color: rgb(31, 168, 188);
+    background-color: #1FA8BC;
+    color: #FFFFFF;
 }
 
+/* Contact Information */
 footer ul.menu-list li {
-	margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
-footer ul.menu-list li:last-child {
-	margin-bottom: 0px;
+footer ul.menu-list li span {
+    display: block;
+    font-size: 15px;
+    color: #EDEDED;
 }
 
-footer ul.menu-list li a {
-	font-size: 14px;
-	color: #fff;
-	transition: all 0.3s;
+footer .menu-list a {
+    font-size: 14px;
+    color: #EDEDED;
+    text-decoration: none;
 }
 
-footer ul.menu-list li a:hover {
-	color: rgb(31, 168, 188);
+footer .menu-list a:hover {
+    color: #1FA8BC;
+    text-decoration: underline;
 }
 
-footer .contact-form input {
-	border-radius: 20px;
-	height: 40px;
-	line-height: 40px;
-	display: inline-block;
-	padding: 0px 15px;
-	color: #aaa!important;
-	background-color: rgb(12, 30, 68);
-	font-size: 13px;
-	text-transform: none;
-	box-shadow: none;
-	border: none;
-	margin-bottom: 15px;
-}
-
-footer .contact-form input:focus {
-	outline: none;
-	box-shadow: none;
-	border: none;
-	background-color: #343434;
-}
-
+/* Contact Form */
+footer .contact-form input, 
 footer .contact-form textarea {
-	border-radius: 20px;
-	height: 120px;
-	max-height: 200px;
-	min-height: 120px;
-	display: inline-block;
-	padding: 15px;
-	color: #aaa!important;
-	background-color: rgb(12, 30, 68);
-	font-size: 13px;
-	text-transform: none;
-	box-shadow: none;
-	border: none;
-	margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #344B66;
+    border-radius: 6px;
+    background-color: #0A1D40;
+    color: #FFFFFF;
+    transition: border-color 0.3s;
 }
 
+footer .contact-form input:focus, 
 footer .contact-form textarea:focus {
-	outline: none;
-	box-shadow: none;
-	border: none;
-	background-color: #343434;
-}
-
-footer .contact-form ::-webkit-input-placeholder { /* Edge */
-  color: #aaa;
-}
-footer .contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #aaa;
-}
-footer .contact-form ::placeholder {
-  color: #aaa;
+    outline: none;
+    border-color: #1FA8BC;
 }
 
 footer .contact-form button.filled-button {
-	background-color: transparent;
-	color: #fff;
-	background-color: rgb(31, 168, 188);
-	border: none;
-	font-size: 13px;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding: 12px 30px;
-	border-radius: 30px;
-	display: inline-block;
-	transition: all 0.3s;
-	outline: none;
-	box-shadow: none;
-	text-shadow: none;
-	cursor: pointer;
+    background-color: #1FA8BC;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 footer .contact-form button.filled-button:hover {
-	background-color: #fff;
-	color: rgb(31, 168, 188);
+    background-color: #FFFFFF;
+    color: #1FA8BC;
 }
 
+/* Google Map Styling */
+#footer-map {
+    margin-top: 25px;
+}
 
+#footer-map iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-/* Sub-footer Style */
-
+/* Sub-footer Styling */
 .sub-footer {
-	background-color: rgb(12, 30, 68);
-	text-align: center;
-	padding: 25px 0px;
+    background-color: #0A1D40;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .sub-footer p {
-	color: #fff;
-	font-weight: 300;
-	letter-spacing: 0.5px;
+    font-size: 14px;
+    color: #EDEDED;
 }
 
 .sub-footer a {
-	color: #fff;
+    color: #1FA8BC;
+    text-decoration: none;
 }
 
+.sub-footer a:hover {
+    text-decoration: underline;
+}
 
-/* about us seprate page start */
+ /* ------------------------------------- footer style ends here -------------------------------------------- */
+
+/* =============================================   main page css ends here   ========================================*/
+
+
+
+
+/* ============================================   about us seprate page start   ======================================*/
 
 .page-heading {
 	position: relative; /* Add this line */
 	text-align: center;
-	background-image: url(../img/bg1.png);
+	background-image: url(../img/bg2.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1397,150 +1568,333 @@ footer .contact-form button.filled-button:hover {
 /* team */
 
 .team {
-
-	/* background-color: #f7f7f7; */
 	margin-top: 50px;
 	margin-bottom: 140px;
-	padding: 120px 0px;
-}
-
-.team-item img {
+	padding: 80px 0;
+	background-color: rgb(245, 253, 253); /* Light background for contrast */
+  }
+  
+  .team-item {
+	margin-bottom: 30px; /* Space between team items */
+	transition: transform 0.3s; /* Smooth scale effect */
+  }
+  
+  .team-item img {
 	width: 100%;
-	overflow: hidden;
-}
-
-.team-item .down-content {
-	background-color:rgb(223, 243, 246);
+	/* border-radius: px; Rounded corners */
+  }
+  
+  .team-item:hover {
+	transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .team-item .down-content {
+	background-color: rgb(223, 243, 246);
 	padding: 30px;
-}
-
-.team-item .down-content h4 {
-	font-size: 20px;
+	/* border-radius: 1s0px; Rounded corners */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .team-item .down-content h4 {
+	font-size: 22px; /* Slightly larger font size */
 	font-weight: 700;
-	letter-spacing: 0.25px;
-	margin-bottom: 10px;
-}
-
-.team-item .down-content span {
+	letter-spacing: 0.5px;
+	margin-bottom: 5px;
+  }
+  
+  .team-item .down-content span {
 	color: rgb(31, 168, 188);
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 16px; /* Larger font for role */
 	display: block;
-	margin-bottom: 15px;
-}
-
-.team-item .down-content p {
+	margin-bottom: 10px;
+  }
+  
+  .team-item .down-content p {
 	margin-bottom: 20px;
+	color: #666; /* Darker text for better readability */
+  }
+  
+
+/* ============================================   about us seprate page start   ======================================*/
+
+
+/* ======================================  our services page starts here ======================================*/
+
+.testimonial-scroll-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+  }
+  .testimonial-card {
+    flex: 0 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  /* Custom scrollbar for the testimonial section (only showing the scrollbar without the track) */
+.testimonial-scroll-wrapper::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+.testimonial-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 238, 238); /* Scrollbar color */
+    border-radius: 25px; /* Adds a rounded border to the scrollbar */
+}
+
+.testimonial-scroll-wrapper::-webkit-scrollbar-track {
+    background-color: transparent; /* Hides the scrollbar track */
+}
+
+/* Remove the scrollbar arrows */
+.testimonial-scroll-wrapper::-webkit-scrollbar-button {
+    display: none; /* Hides the left and right arrow buttons */
+}
+
+/* For Firefox */
+.testimonial-scroll-wrapper {
+    scrollbar-color: rgb(0, 238, 238) transparent; /* Only showing the scrollbar without the track */
+    scrollbar-width: thin; /* Controls the width of the scrollbar */
+    border-radius: 25px; /* Adds a rounded border to the scrollbar */
 }
 
 
-/* Single Service */
+/* FAQ's section in the service page  */
+.faq-section {
+	padding: 60px 0;
+	/* background-color: rgb(115, 196, 209); */
+  }
+  
+  .accordion .card {
+	border: none;
+	margin-bottom: 15px;
+	border-radius: 0;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .accordion .card-header {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	padding: 10px 20px;
+  }
+  
+  .accordion .btn-link {
+	color: #333;
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	text-align: left;
+  }
+  
+  .accordion .btn-link i {
+	font-size: 16px;
+	transition: transform 0.3s;
+  }
+  
+  .accordion .btn-link.collapsed i {
+	transform: rotate(0);
+  }
+  
+  .accordion .btn-link:not(.collapsed) i {
+	transform: rotate(180deg);
+  }
+  
+  .accordion .collapse {
+	padding: 0px;
+  }
+  
+  .accordion .card-body {
+	font-size: 16px;
+	color: #555;
+	background-color: rgba(221, 252, 252, 0.63);
+  }
+  
+  .accordion .card-body p {
+	margin-bottom: 0;
+  }
+  
+
+/* ======================================  our services page starts here ======================================*/
+
+
+/* =============================   Our Training page start  ==================================  */	
 
 .single-services {
-	margin-top: 140px;
+    padding-top: 140px;
+    padding-bottom: 70px;
 }
 
 #tabs ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 #tabs ul li {
-  margin-bottom: 10px;
-  display: inline-block;
-  width: 100%;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
 }
+
 #tabs ul li:last-child {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 #tabs ul li a {
-	text-transform: capitalize;
-	width: 100%;
-	padding: 30px 30px;
-	display: inline-block;
-	background-color: #a4c639;
-  	font-size: 20px;
-  	color: #121212;
-  	letter-spacing: 0.5px;
-  	font-weight: 700;
-  	transition: all 0.3s;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 30px 30px;
+    display: inline-block;
+    background-color: rgb(31, 168, 188);
+    font-size: 20px;
+    color: #121212;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    transition: all 0.3s;
 }
+
 #tabs ul li a i {
-	float: right;
-	margin-top: 5px;
+    float: right;
+    margin-top: 5px;
 }
-#tabs ul .ui-tabs-active span {
-  background: #faf5b2;
-  border: #faf5b2;
-  line-height: 90px;
-  border-bottom: none;
-}
-#tabs ul .ui-tabs-active a {
-  color: #fff;
-}
-#tabs ul .ui-tabs-active span {
-  color: #1e1e1e;
-}
+
 .tabs-content {
-	margin-left: 30px;
-  text-align: left;
-  display: inline-block;
-  transition: all 0.3s;
+    margin-left: 30px;
+    text-align: left;
+    display: none;
+    transition: all 0.3s;
 }
+
+.tabs-content.active {
+    display: block;
+}
+
 .tabs-content img {
-	max-width: 100%;
-	overflow: hidden;
+    width: 100%;            /* Ensures the image width matches the text width */
+    height: 150px;          /* Sets a small height for the image */
+    object-fit: cover;      /* Ensures the image is not distorted */
+    margin-bottom: 15px;    /* Adds some space between the image and the heading */
 }
+
 .tabs-content h4 {
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 0.25px;
-	margin-bottom: 15px;
-	margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    margin-bottom: 15px;
+    margin-top: 30px;
 }
+
 .tabs-content p {
-  font-size: 14px;
-  color: #7a7a7a;
-  margin-bottom: 0px;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 10px;
 }
 
+.tabs-content ul {
+    margin-left: 20px;
+}
 
+.tabs-content ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
 
-/* Contact Information */
+/* upcoming workshop section on our training page */
+    /* CSS for the button */
+    .button {
+		background-color: rgb(19, 45, 102); /* Background color applied */
+		color: white; /* Text color */
+		padding: 8px 20px; /* Padding for button */
+		border: 0.01px solid rgb(19, 45, 102);
+		border-radius: 25px; /* Optional: Rounded corners */
+		text-decoration: none; /* Remove underline */
+		display: inline-block;
+	  }
+  
+	  .button:hover {
+		background-color: white; /* Darken color on hover */
+		color: rgb(19, 45, 102);
+		border: 0.01px solid rgb(19, 45, 102);
+	  }
+  
+	  /* Styling the section */
+	  .workshop-section {
+		padding: 50px 0;
+	  }
+  
+	  
+  
+	  .workshop-item {
+		background-color: #DFF3F6;
+		padding: 40px 30px;
+		margin-bottom: 30px;
+		border-radius: 8px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	  }
+  
+	  .workshop-item h4 {
+		margin-bottom: 10px;
+		color: rgb(19, 45, 102);
+	  }
+  
+	  .workshop-item p {
+		margin-bottom: 10px;
+		color: #333;
+	  }
+  
+/* ===============================   Our Training page ends here   =======================================*/
+
+/* ===============================   Contact Us page start   ========================================== */
 
 .contact-information {
-	margin-top: 140px;
+    margin-top: 140px;
+    margin-bottom: 70px;
 }
 
 .contact-information .contact-item {
-	padding: 60px 30px;
-	background-color: rgb(223, 243, 246);
-	text-align: center;
-	height: 2w0;
+	height: 400px;
+    padding: 60px 30px;
+    background-color: rgb(223, 243, 246);
+    text-align: center;
+    border-radius: 8px; /* Add border-radius for a more modern card design */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
 .contact-information .contact-item i {
-	color: rgb(12, 30, 68);
-	font-size: 48px;
-	margin-bottom: 40px;
+    color: rgb(12, 30, 68);
+    font-size: 48px;
+    margin-bottom: 40px;
 }
 
 .contact-information .contact-item h4 {
-	font-size: 20px;
-	font-weight: 700;
-	letter-spacing: 0.25px;
-	margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    margin-bottom: 15px;
 }
 
 .contact-information .contact-item p {
-	margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .contact-information .contact-item a {
-	font-weight: 600;
-	color: rgb(12, 30, 68);
-	font-size: 15px;
+    font-weight: 600;
+    color: rgb(12, 30, 68);
+    font-size: 15px;
+    text-decoration: none;
 }
 
+.contact-information .contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================   Contact Us page ends   ========================================== */
 
 
 
@@ -1637,7 +1991,7 @@ footer .contact-form button.filled-button:hover {
 		padding-bottom: 50px;
 	}
 	.down-content{
-		margin-bottom: 30px;
+		
 	}
 
 	/* our services section css for the mobile view end*/
